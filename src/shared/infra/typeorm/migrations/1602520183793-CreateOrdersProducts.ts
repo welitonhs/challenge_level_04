@@ -8,6 +8,13 @@ export default class CreateOrdersProducts1602520183793
         name: 'orders_products',
         columns: [
           {
+            name: 'id',
+            type: 'uuid',
+            isPrimary: true,
+            generationStrategy: 'uuid',
+            default: 'uuid_generate_v4()',
+          },
+          {
             name: 'product_id',
             type: 'uuid',
           },
@@ -16,10 +23,14 @@ export default class CreateOrdersProducts1602520183793
             type: 'uuid',
           },
           {
-            name: 'quantity',
+            name: 'price',
             type: 'numeric',
-            precision: 11,
-            scale: 0,
+            precision: 13,
+            scale: 2,
+          },
+          {
+            name: 'quantity',
+            type: 'int',
           },
           {
             name: 'created_at',

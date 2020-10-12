@@ -20,14 +20,12 @@ export default class CreateProducts1602518171924 implements MigrationInterface {
           {
             name: 'price',
             type: 'numeric',
-            precision: 15,
-            scale: 4,
+            precision: 13,
+            scale: 2,
           },
           {
             name: 'quantity',
-            type: 'numeric',
-            precision: 11,
-            scale: 0,
+            type: 'int',
           },
           {
             name: 'created_at',
